@@ -2,55 +2,107 @@
 @media screen and (max-width: 1300px)
   .banner
     &__container
-      padding: 0 40px 0 80px
+      padding: 0 40px 0 40px
+
+@media screen and (max-width: 1220px)
+  .banner
+    &__info
+      transform: scale(.95)
+      transform-origin: left center
+      &-sub
+        font-size: 9px
+        line-height: 14px
+        width: 100%
+        max-width: 100%
 
 @media screen and (max-width: 1150px)
   .banner
     &__container
       padding: 0 30px 0 60px
+    &__info
+      transform: scale(.92)
+      &-sub
+        font-size: 8.5px
 
-@media screen and (max-width: 1110px)
+@media screen and (max-width: 1100px)
   .banner
-    padding: 67px 0 20px 0
+    padding: 140px 0 40px 0
     &__container
       padding: 0 25px 0 60px
     &__info
-      transform-origin: left center
-      transform: scale(.8)
+      transform: scale(1.2)
+      transform-origin: bottom left
+      &-link
+        font-size: 18px
+        padding: 18px 16px 16px
+      &-sub
+        max-width: 100%
+        font-size: 7px
+        margin-top: 30px
+      &-wrap
+        margin-top: 15px
+      &-top
+        font-size: 40px
+        line-height: 47px
+        max-width: 420px
+      &-center, &-bottom
+        width: 210px
+        &-item
+          font-size: 32px
+          line-height: 32px
+          &:nth-child(1)
+            font-size: 12px
+            line-height: 12px
+          span
+            font-size: 14px
+            line-height: 14px
+      &-center
+        padding: 9px 24px 5px 11px
+      &-bottom
+        padding: 9px 24px 7px
+        &::before
+          width: 34px
+          height: 30px
+
+@media screen and (max-width: 1050px)
+  .banner
+    &__info
+      &-sub
+        max-width: 90%
+
 
 @media screen and (max-width: 975px)
   .banner
     padding: 67px 0 0px 0
     margin-bottom: -50px
+    &__info
+      transform: scale(1)
 
 @media screen and (max-width: 870px)
   .banner
     margin-bottom: 0px
     padding: 60px 0 25px
     &__info
-      transform: scale(1)
       top: 13px
-      &-top
-        font-size: 40px
-        line-height: 38px
-      &-center, &-bottom
-        font-size: 33px
-        width: 200px
-        height: 45px
-      &-center
-        padding: 6px 12px 5px 10px
-        span
-          font-size: 15px
-      &-bottom
-        line-height: 36px
-        &::before
-          width: 22px
-          height: 19px
-          left: -11px
       &-sub
-        font-size: 9px
-        line-height: 12px
+        font-size: 8px
+        line-height: 15px
         margin: 30px 0 25px
+  .info
+    &__list
+      gap: 15px
+      justify-content: space-between
+    &__item
+      width: 100%
+      &-title
+        font-size: 40px
+        line-height: 40px
+        span
+          font-size: 25px
+          line-height: 25px
+      &-text
+        font-size: 14px
+        line-height: 24px
 
 @media screen and (max-width: 770px)
   .banner
@@ -60,6 +112,13 @@
   .banner
     &__container
       padding: 0 25px 0 40px
+
+@media screen and (max-width: 720px)
+  .banner
+    padding-top: 40px
+    &__info
+      transform: scale(.92)
+      transform-origin: bottom left
 
 @media screen and (max-width: 600px)
   .banner
@@ -75,12 +134,16 @@
       position: static
       padding: 10px 15px 0 15px
     &__info
+      transform: scale(1)
       margin: 0
       z-index: 4
       align-items: center
       width: 100%
       min-height: 535px
       padding-bottom: 65px
+      &-sub
+        line-height: 12px
+        font-size: 7.5px
       &-link
         align-self: center
         margin-top: auto
@@ -90,22 +153,32 @@
       &-wrap
         width: 100%
         justify-content: center
-        max-height: 38px
+        //max-height: 38px
         margin-top: 5px
       &-center, &-bottom
-        font-size: 26px
-        line-height: 26px
         width: 50%
         max-width: 170px
-        max-height: 38px
-
+        &-item
+          font-size: 28px
+          line-height: 28px
+      &-bottom
+        padding: 14px 24px 9px
+        &::before
+          width: 24px
+          height: 21px
       &-center
-        padding: 7px 17px 5px 10px
+        padding: 13px 17px 8px 10px
         span
           font-size: 12px
       &-sub
         margin: 10px 0 0 0
         text-align: center
+
+@media screen and (max-width: 600px) and (min-width: 530px) and (orientation: portrait)
+  .banner
+    min-height: 645px
+    &__info
+      min-height: 645px
 
 @media screen and (max-width: 365px)
   .banner
@@ -114,26 +187,33 @@
         font-size: 8.8vw
         line-height: 33px
       &-center, &-bottom
-        font-size: 7.3vw
+        &-item
+          font-size: 7.3vw
+          line-height: 7.3vw
+          &:nth-child(1)
+            font-size: 3.3vw
+            line-height: 3.3vw
       &-bottom
         line-height: 28px
       &-center
         span
           font-size: 3.5vw
       &-sub
-        font-size: 8px
-        line-height: 12px
+        font-size: 7px
+        line-height: 11px
 
 @media screen and (max-width: 325px)
   .banner
     &__info
+      &-link
+        font-size: 17px
       &-sub
-        font-size: 7.5px
-        line-height: 11px
+        font-size: 6.5px
+        line-height: 10px
       &-bottom
         &::before
-          transform-origin: center
-          transform: scale(.7) translate(0, -65%)
+          width: 18px
+          height: 16px
 
 @media screen and (max-width: 1270px)
   .info
@@ -148,7 +228,7 @@
 @media screen and (max-width: 975px)
   .info
     margin-top: -25px
-    margin-bottom: 50px
+    margin-bottom: 25px
 
 @media screen and (max-width: 870px)
   .rules
@@ -173,6 +253,7 @@
     &__list
       grid-template-columns: 100%
 
+
 @media screen and (max-width: 700px)
   .info
     margin-bottom: 20px
@@ -180,19 +261,21 @@
 @media screen and (max-width: 600px)
   .info
     margin: -30px 0 20px 0
-    &__list
-      gap: 15px
     &__item
       padding: 30px
+      &-text
+        line-height: 22px
       &-title
         font-size: 35px
         line-height: 40px
+        span
+          font-size: 30px
   .rules
     padding: 0 0 50px 0
     &__summary
       font-size: 18px
       line-height: 25px
-      padding: 11px 14% 9px 20px
+      padding: 24px 14% 21px 20px
       &::before
         right: 25px
         width: 14px
@@ -208,6 +291,18 @@
         li
           font-size: 14px
           line-height: 28px
+          margin-bottom: 10px
+          ul
+            li
+              margin-bottom: 15px
+              &:last-child
+                margin-bottom: 0
+              ul
+                margin-top: 20px
+                li
+                  margin: 15px 0 15px 0
+                  &:last-child
+                    margin-bottom: 0
 
 @media screen and (max-width: 376px)
   .rules
@@ -246,16 +341,45 @@
     &__info
       height: 100%
       transform: scale(.8)
-      transform-origin: top bottom
+      transform-origin: top left
+      &-sub
+        font-size: 10px
+        line-height: 16px
+        max-width: 140%
+
+@media screen and (min-width: 850px) and (max-height: 450px) and (orientation: landscape)
+  .banner
+    padding-top: 55px
+    &__info
+      transform: scale(.75)
+
+
+@media screen and (max-width: 600px) and (max-height: 380px) and (orientation: landscape)
+  .banner
+    &__info
+      align-items: flex-start
+      transform: scale(.95)
+      &-wrap
+        justify-content: flex-start
+      &-link
+        margin-top: 20px
+        align-self: flex-start
+      &-sub
+        text-align: left
+        font-size: 8px
+        line-height: 12px
+
 
 /************************FOLD
 
 @media screen and (max-width: 700px) and (min-width: 640px) and (max-height: 700px) and (min-height: 640px) and (orientation: landscape)
   .banner
+    padding-top: 0
     &__info
-      transform: scale(.9)
+      transform: scale(.8)
 
 @media screen and (max-width: 700px) and (min-width: 640px) and (max-height: 700px) and (min-height: 640px) and (orientation: portrait)
   .banner
+    padding-top: 0
     &__info
-      transform: scale(.9)
+      transform: scale(.8)
