@@ -73,8 +73,8 @@
 
 @media screen and (max-width: 975px)
   .banner
-    padding: 67px 0 0px 0
-    margin-bottom: -50px
+    padding: 97px 0 0px 0
+    //margin-bottom: -50px
     &__info
       transform: scale(1)
 
@@ -146,7 +146,7 @@
         font-size: 7.5px
       &-link
         align-self: center
-        margin-top: auto
+        margin: auto 0 10px 0
       &-top
         font-size: 32.5px
         line-height: 38px
@@ -348,11 +348,14 @@
     &__info
       height: 100%
       transform: scale(.8)
-      transform-origin: top left
+      transform-origin: center left
       &-sub
         font-size: 10px
         line-height: 16px
         max-width: 140%
+      &-link
+        margin-bottom: 10px
+
 
 @media screen and (min-width: 850px) and (max-height: 450px) and (orientation: landscape)
   .banner
