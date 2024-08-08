@@ -12,6 +12,12 @@ $font-suisse-reg: 'SuisseIntl-Regular', sans-serif // 400 //
 $font-suisse-med: 'SuisseIntl-Medium', sans-serif // 500 //
 $font-suisse-semb: 'SuisseIntl-SemiBold', sans-serif // 600 //
 
+.dark-btn
+  position: fixed
+  top: 0
+  left: 0
+  z-index: 30
+
 @mixin breakpoint($bp)
   @media screen and (max-width: $bp)
     @content
@@ -343,7 +349,7 @@ body
 .rules
   color: $grey
   padding: 50px 0 50px 0
-  background: $dark-blue
+  //background: $dark-blue
   &__details[open] .rules__summary::before
     transform: translateY(-50%) rotate(0deg)
   &__summary
